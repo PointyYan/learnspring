@@ -17,9 +17,9 @@ public class DataSourceConfiguration {
     private String jdbcDriver;
     @Value("${jdbc.url}")
     private String jdbcUrl;
-    @Value("${jdbc.username")
+    @Value("${jdbc.user}")
     private String jdbcUserName;
-    @Value("${jdbc.password")
+    @Value("${jdbc.password}")
     private String jdbcPassWord;
 
     @Bean(name = "dataSource")
