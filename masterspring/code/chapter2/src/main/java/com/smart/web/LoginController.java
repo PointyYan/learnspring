@@ -16,7 +16,7 @@ import java.util.Date;
  * @Date: Created in 16:38 2018/4/16
  * @Modified By:
  */
-
+//标注一个bean，标注为@Controller的首先会是一个Bean，所以可以进行@Autowired注入
 @Controller
 public class LoginController {
     private UserService userService;

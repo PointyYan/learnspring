@@ -1,5 +1,7 @@
 E:\Java\masterspring\code\chapter2\src\main\java\com\smart\domain\User.java
 E:\Java\masterspring\code\chapter2\src\main\java\com\smart\dao\UserDao.java
+E:\Java\masterspring\code\chapter2\src\main\java\com\smart\web\LoginCommand.java
+E:\Java\masterspring\code\chapter2\src\main\java\com\smart\web\LoginController.java
 E:\Java\masterspring\code\chapter2\src\main\java\com\smart\dao\LoginLogDao.java
 E:\Java\masterspring\code\chapter2\src\main\java\com\smart\service\UserService.java
 E:\Java\masterspring\code\chapter2\src\main\java\com\smart\domain\LoginLog.java

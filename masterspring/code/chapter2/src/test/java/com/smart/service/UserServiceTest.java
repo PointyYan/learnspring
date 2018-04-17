@@ -44,7 +44,6 @@ public class UserServiceTest extends AbstractTransactionalTestNGSpringContextTes
 
     }
 
-
     @Test
     public void testAddLoginLog() {
         User user = userService.findUserByUserName("admin");

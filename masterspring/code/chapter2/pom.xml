@@ -74,6 +74,17 @@
             <version>${spring.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${javax.servlet.jstl}</version>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>${taglibs.standard}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -121,5 +132,7 @@
         <testng.version>6.8.7</testng.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <javax.servlet.jstl>1.1.2</javax.servlet.jstl>
+        <taglibs.standard>1.1.2</taglibs.standard>
     </properties>
 </project>
