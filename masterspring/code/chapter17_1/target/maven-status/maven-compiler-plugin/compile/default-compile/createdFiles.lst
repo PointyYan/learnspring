@@ -1,0 +1,5 @@
+com\smart\UserService.class
+com\smart\domain\Dept.class
+com\smart\domain\Address.class
+com\smart\domain\User.class
+com\smart\web\UserController.class
