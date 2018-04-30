@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 扫描com.smart.dao下的所有标注@Repository的DAO组件 -->
+    <context:component-scan base-package="com.smart.dao"/>
+
+    <!-- 引入定义JDBC连接的属性文件 -->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+
+    <!-- 定义一个数据源 -->
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close"
+          p:driverClassName="${jdbc.driverClassName}"
+          p:url="${jdbc.url}"
+          p:username="${jdbc.username}"
+          p:password="${jdbc.password}">
+    </bean>
+
+    <!-- 定义Hibernate的session工厂 -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource">
+        </property>
+        <property name="packagesToScan">
+            <!-- 扫描基于JPA注解下的PO类 -->
+            <list>
+                <value>com.smart.domain</value>
+            </list>
+        </property>
+        <!-- 指定Hibernate的属性信息 -->
+        <property name="hibernateProperties">
+            <props>
+                <!-- 制定数据库类型为MySql -->
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.MySQLDialect
+                </prop>
+                <!-- 在提供数据库操作里显示SQL，方便开发期的调试，在部署时应将其设计为false -->
+                <prop key="hibernate.show_sql">
+                    true
+                </prop>
+                <!-- 采用EHCache缓存实现方案 -->
+                <prop key="hibernate.cache.region.factory_class">
+                    org.hibernate.cache.ehcache.EhCacheRegionFactory
+                </prop>
+                <prop key="hibernate.cache.use_query_cache">
+                    true
+                </prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- 定义HibernateTemplate -->
+    <bean id="hibernateTemplate"
+          class="org.springframework.orm.hibernate4.HibernateTemplate"
+          p:sessionFactory-ref="sessionFactory">
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED" read-only="true"/>
+            <tx:method name="create*" propagation="REQUIRED" read-only="false" />
+            <tx:method name="save*" propagation="REQUIRED" read-only="false" />
+            <tx:method name="reg*" propagation="REQUIRED" read-only="false" />
+            <tx:method name="update*" propagation="REQUIRED" read-only="false" />
+            <tx:method name="delete*" propagation="REQUIRED" read-only="false" />
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:advisor id="managerTx" advice-ref="txAdvice" pointcut="execution(* com.smart.*.*(..)))" order="1"/>
+    </aop:config>
+
+</beans>
