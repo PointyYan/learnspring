@@ -60,6 +60,7 @@ public class BoardDaoTest extends BaseDaoTest {
         Board board = boardDao.load(1);
         assertNotNull(board);
         assertEquals(board.getBoardName(), "育儿");
+        //
     }
 
 }

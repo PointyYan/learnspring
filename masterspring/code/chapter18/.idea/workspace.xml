@@ -42,8 +42,8 @@
       <file leaf-file-name="BoardDaoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/smart/dao/BoardDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+            <state relative-caret-position="378">
+              <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,11 +175,11 @@
         <option value="$PROJECT_DIR$/src/test/java/com/smart/controller/RegisterControllerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/smart/dao/BaseDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/smart/dataset/util/XlsDataSetBeanFactory.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/smart/dao/BoardDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/xiaochun-dao.xml" />
         <option value="$PROJECT_DIR$/src/test/resources/unitils.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/com/smart/dao/BoardDaoTest.java" />
       </list>
     </option>
   </component>
@@ -217,7 +217,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -578,7 +578,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524969144840</updated>
-      <workItem from="1524969163445" duration="29101000" />
+      <workItem from="1524969163445" duration="29117000" />
     </task>
     <servers />
   </component>
@@ -597,10 +597,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29101000" />
+    <option name="totallyTimeSpent" value="29117000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1154,8 +1154,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/smart/dao/BoardDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+        <state relative-caret-position="378">
+          <caret line="53" column="31" lean-forward="true" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
