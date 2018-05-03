@@ -3,7 +3,7 @@ package com.smart.dao;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.HibernateTemplate;
+import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.util.Assert;
 
 import java.io.Serializable;
@@ -22,7 +22,6 @@ import java.util.regex.Pattern;
 public class BaseDao<T> {
     private Class<T> entityClass;
 
-    @Autowired
     private HibernateTemplate hibernateTemplate;
 
     /**

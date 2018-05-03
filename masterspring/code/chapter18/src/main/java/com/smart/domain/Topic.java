@@ -1,5 +1,7 @@
 package com.smart.domain;
 
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -9,6 +11,9 @@ import java.util.Date;
  * @Date: Created in 13:27 2018/4/29
  * @Modified By:
  */
+@Entity
+@org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@Table(name = "t_topic")
 public class Topic extends BaseDomain {
     /**
      * 精华主题帖子

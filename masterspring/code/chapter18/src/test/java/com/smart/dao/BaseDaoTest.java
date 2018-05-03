@@ -9,7 +9,7 @@ import org.unitils.spring.annotation.SpringApplicationContext;
  * @Date: Created in 16:32 2018/4/30
  * @Modified By:
  */
-@SpringApplicationContext({"classpath:/xiaochun-dao.xml"})
+@SpringApplicationContext({"xiaochun-dao.xml"})
 public class BaseDaoTest extends UnitilsTestNG {
 
 }
